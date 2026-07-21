@@ -1,0 +1,63 @@
+Desafio Técnico - Desenvolvedor Full Stack Sênior
+
+Reserva de Vagas para Evento
+
+Orientações:
+Não buscamos a solução "perfeita", e propositalmente não dizemos como
+resolver. Um trecho bem-resolvido e bem-explicado vale mais que um sistema
+completo e frágil.
+Este case é aberto de propósito. As decisões de modelagem, arquitetura,
+contratos e estratégias técnicas são inteiramente suas, é justamente isso que
+queremos observar. Não vamos dizer o que fazer nem como resolver.
+Interessa-nos como você raciocina diante de um recurso escasso e disputado,
+como lida com um serviço externo que não é confiável, e como comunica e
+justifica suas escolhas.
+Uso de Inteligência Artificial
+Você pode usar Inteligência Artificial da forma que preferir durante o
+desenvolvimento. Em contrapartida, pedimos que envie, junto com a solução,
+uma explicação do processo: como utilizou IA, em que partes ela ajudou e,
+principalmente, os detalhes das decisões que você tomou com o apoio dela (o
+que aceitou, o que ajustou, o que descartou e por quê).
+
+Cenário
+Organizamos eventos e workshops com número fixo de vagas. Quando um
+evento popular é aberto, milhares de pessoas tentam se inscrever ao mesmo
+tempo, nos primeiros segundos.
+Na última edição, isso deu errado de algumas formas que precisamos evitar:
+● Confirmamos mais inscrições do que havia vagas. Duas pessoas
+garantiram "a última vaga" no mesmo instante e ambas foram aceitas.
+● Vários participantes apareceram inscritos em duplicidade, clicaram
+mais de uma vez, ou a conexão instável reenviou o pedido, e o sistema
+criou duas reservas para a mesma pessoa.
+● O serviço que envia a confirmação de vaga (e-mail/notificação)
+disparou, em alguns casos, a mesma confirmação repetidas vezes
+para o participante.
+
+Queremos uma nova versão desse fluxo de reserva de vagas que não repita
+esses problemas, mesmo sob alta concorrência.
+Ao garantir a vaga, o participante deve receber uma confirmação por e-mail.
+Vale destacar que pretendemos, no futuro, oferecer essa confirmação também
+por WhatsApp, então leve isso em conta ao pensar sua solução.
+
+Restrições
+Back-end: Java + Spring Boot.
+Front-end: um framework ou biblioteca de sua escolha.
+Os dados das vagas podem ser mockados da forma que você preferir. Basta
+haver uma carga inicial com as informações do evento e a quantidade de
+vagas disponível.
+
+Informações dos eventos (carga inicial)
+Use os dados abaixo como base para a carga inicial (você pode ajustá-los ou
+representá-los como preferir):
+
+Entregáveis
+1. O projeto (front + back) enviado em um arquivo .zip , sem as pastas de
+bibliotecas (ex.:node_modules , target / build). Garanta que o pom.xml
+e o package.json contenham todas as configurações e dependências
+necessárias para a instalação local.
+2. Instruções para rodar o projeto.
+3. Um README.md explicando suas decisões de modelagem e arquitetura, os
+trade-offs assumidos, e o que faria diferente com mais tempo.
+
+4. Um documento (ou seção no README) descrevendo como utilizou a IA e
+as decisões que tomou com o apoio dela.
