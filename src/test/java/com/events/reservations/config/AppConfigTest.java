@@ -22,6 +22,7 @@ class AppConfigTest {
     void shouldAllowLoopbackOriginForFrontendRequests() throws Exception {
         mockMvc.perform(options("/api/events")
                         .header(HttpHeaders.ORIGIN, "http://127.0.0.1:8080")
+                        .header(HttpHeaders.ORIGIN, "https://projeto-paripassu-frontend-deploy.onrender.com/")
                         .header(HttpHeaders.ACCESS_CONTROL_REQUEST_METHOD, "GET"))
                 .andExpect(status().isOk())
                 .andExpect(header().string(HttpHeaders.ACCESS_CONTROL_ALLOW_ORIGIN, "http://127.0.0.1:8080"));
